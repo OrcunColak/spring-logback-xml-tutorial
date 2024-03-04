@@ -9,6 +9,11 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.IntStream;
 
+/**
+ * See <a href="https://medium.com/@facuramallo8/understanding-logback-66044df087ed">...</a>
+ * In the context of modern apps, layouts are no longer used because the approach to append logs to files has changed toward
+ * logging aggregation systems in containerized apps into clusters or cloud environments where logs are delivered as byte array streams.
+ */
 public class MaskingPatternLayout extends PatternLayout {
 
     private Pattern multilinePattern;
