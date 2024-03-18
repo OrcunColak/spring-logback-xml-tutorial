@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
+
+    <!-- Define appenders -->
+    <appender name="MDCAppender" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <!-- Use a pattern layout with MDC values -->
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg [%X{request-uri:-}] [%X{request-method:-}] [%X{startTime:-}]%n</pattern>
+        </encoder>
+    </appender>
+
     <!-- Console appender configuration -->
     <appender name="Console"
               class="ch.qos.logback.core.ConsoleAppender">
@@ -46,6 +55,7 @@
     <root level="info">
         <appender-ref ref="Console" />
         <appender-ref ref="RollingFile" />
+        <appender-ref ref="MDCAppender" />
     </root>
 
 </configuration>

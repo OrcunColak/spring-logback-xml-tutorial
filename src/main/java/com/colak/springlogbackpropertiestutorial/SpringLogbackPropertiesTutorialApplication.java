@@ -18,5 +18,4 @@ public class SpringLogbackPropertiesTutorialApplication {
     CommandLineRunner commandLineRunner() {
         return args -> log.info("password=a");
     }
-
 }

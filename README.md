@@ -10,3 +10,8 @@ https://medium.com/@dixitsatish34/mask-sensitive-data-in-log-messages-in-spring-
 
 Implementation is from  
 https://blog.stackademic.com/add-masking-to-sensitive-data-in-logs-using-logback-87a0e39f78bc
+
+# MDC
+
+the original idea is from  
+https://medium.com/digigeek/deepdive-logging-journey-with-spring-logback-and-mdc-a61637fd6657
