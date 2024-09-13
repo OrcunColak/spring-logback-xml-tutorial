@@ -1,4 +1,4 @@
-package com.colak.springlogbackpropertiestutorial.interceptor;
+package com.colak.springtutorial.interceptor;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;

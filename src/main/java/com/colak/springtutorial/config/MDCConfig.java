@@ -1,6 +1,6 @@
-package com.colak.springlogbackpropertiestutorial.config;
+package com.colak.springtutorial.config;
 
-import com.colak.springlogbackpropertiestutorial.interceptor.MDCMessageHandlerInterceptor;
+import com.colak.springtutorial.interceptor.MDCMessageHandlerInterceptor;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;

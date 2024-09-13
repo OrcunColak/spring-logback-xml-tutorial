@@ -1,4 +1,4 @@
-package com.colak.springlogbackpropertiestutorial.layout;
+package com.colak.springtutorial.layout;
 
 import ch.qos.logback.classic.PatternLayout;
 import ch.qos.logback.classic.spi.ILoggingEvent;

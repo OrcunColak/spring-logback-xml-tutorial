@@ -12,17 +12,22 @@
     <!-- Console appender configuration -->
     <appender name="Console"
               class="ch.qos.logback.core.ConsoleAppender">
-        <layout class="com.colak.springlogbackpropertiestutorial.layout.MaskingPatternLayout">
+        <layout class="com.colak.springtutorial.layout.MaskingPatternLayout">
             <maskPattern>password=(\w+)</maskPattern>
             <Pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %magenta([%thread]) ${PID} %highlight(%-5level) %-50logger{40} : %msg%n</Pattern>
         </layout>
 
         <!-- Instead of encoder use a layout to mask sensitive data -->
         <!-- <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder"> -->
-        <!--     <layout class="com.colak.springlogbackpropertiestutorial.layout.MaskingPatternLayout"> -->
+        <!--     <layout class="com.colak.springtutorial.layout.MaskingPatternLayout"> -->
         <!--         <Pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %magenta([%thread]) ${PID} %highlight(%-5level) %-50logger{40} : %msg%n</Pattern> -->
         <!--     </layout> -->
         <!-- </encoder> -->
+    </appender>
+
+    <appender name="ASYNC_CONSOLE" class="ch.qos.logback.classic.AsyncAppender">
+        <neverBlock>true</neverBlock>
+        <appender-ref ref="CONSOLE"/>
     </appender>
 
     <!-- Rolling file appender configuration -->
